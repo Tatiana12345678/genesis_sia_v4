@@ -12,7 +12,7 @@ public class MonoliticoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MonoliticoApplication.class, args);
 	}
-	@GetMapping("Hungry")
+	@GetMapping("hola")
 	public static String holaMundo(){
 		return "hola mundo";
 	}
