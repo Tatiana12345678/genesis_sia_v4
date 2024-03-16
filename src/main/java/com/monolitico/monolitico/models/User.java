@@ -12,6 +12,4 @@ public class User {
     private LocalDate brittDay;
     private String email;
 
-
-
 }
