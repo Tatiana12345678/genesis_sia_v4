@@ -20,7 +20,18 @@ public class UserController {
     @GetMapping
     public List<User> userList(){
         return  userService.getAllUsers();
-
+    }
+    @PutMapping({"id"})
+    public User UpdateUser(@PathVariable Long id,@RequestBody User user ) throws Exception {
+       return userService.editUser(id, user);
+    }
+    @DeleteMapping({"id"})
+    public Boolean deleteUser(@PathVariable Long id) throws Exception {
+        return userService.deleteUser(id);
+    }
+    @GetMapping({"id"})
+    public User getUserById(@PathVariable Long id) throws Exception {
+       return userService.getUserById(id);
     }
 
 }
